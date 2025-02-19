@@ -11,14 +11,9 @@ produto= primeiro_numero * segundo_numero
 
 
 
-if primeiro_numero < segundo_numero:
+menor = min (primeiro_numero, segundo_numero)
+maior = max (primeiro_numero, segundo_numero)
 
-    menor = primeiro_numero
-    maior = segundo_numero
-else:
-    
-    menor = segundo_numero
-    maior = primeiro_numero
 
 print("\nExibindo resultados: ")
 print(f"Média: {media}")
