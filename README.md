@@ -68,8 +68,6 @@ R=(F OR F) AND (V AND V) OR NOT V
 R=F AND V OR F
 R=F OR F
 R=F
-R=
-R=
 
 
 
