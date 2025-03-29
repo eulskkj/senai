@@ -1,13 +1,10 @@
-import os
-os.system ("cls || clear")
-
-#continuar
-
 contador = 0
 soma = 0
 salario_feminino = 0
+idades = []
 
 while True:
+    # Mostrando o menu
     tabela = int(input(""" 
     Código | Descrição
        1   |  Adicionar pessoa   
@@ -17,27 +14,46 @@ Digite sua opção desejada: """))
     
     match tabela:
         case 1:
+            # Pedindo dados
             salario = float(input("Digite o salário: "))
+            sexo = input("Digite seu sexo (M/F): ").strip().lower()
             idade = int(input("Digite sua idade: "))
-            sexo = input("Digite seu sexo (M/F): ")
+
+            # Armazena a idade na lista
+            idades.append(idade)
+
+            # Conta mulheres com salário >= 5000
+            if sexo == "f" and salario >= 5000:
+                salario_feminino += 1
+
+            # Atualiza soma dos salários e contador de pessoas
+            soma += salario
             contador += 1
+
         case 2:
-            print(f"Media salarial: {media}")
-            print(f"Quantidade de salário feminino a partir de R$5.000: {salario_feminino}")
-            print(f"Maior idade: {maior}")
-            print(f"Menor idade: {menor}")
+            if contador > 0:
+                media = soma / contador
+            else:
+                media = 0
+
+            if idades:  # Garante que há idades registradas antes de usar max() e min()
+                print(f"Maior idade: {max(idades)}")
+                print(f"Menor idade: {min(idades)}")
+            else:
+                print("Nenhuma idade registrada.")
+
+            print(f"Média salarial: R$ {media:.2f}")
+            print(f"Quantidade de mulheres com salário >= R$5.000: {salario_feminino}")
+            
+            input("\nPressione Enter para continuar...")
+
         case 3:
-            break 
+            print("Finalizando programa...")
+            break
+
         case _:
-            print("opção inválida")
-
-            salario += soma
-            media = soma / contador
-            menor = min(idade)
-            maior = max(idade)
-            salario_feminino == "F" and salario_feminino == 5.000
-
-
+            print("Opção inválida. Tente novamente.")
+            input("\nPressione Enter para continuar...")
 
 
 
