@@ -12,7 +12,7 @@
 #Ao adicionar uma pessoa, deve-se limpar o terminal e apresentar o menu novamente.
 
 import os
-os.system(cls || clear)
+os.system("cls || clear")
 
 contador = 0
 soma = 0
