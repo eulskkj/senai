@@ -10,7 +10,7 @@ const idade = "20"
 
 // exibindo resultado
 console.log('Idade: ', idade)
-console.log(`Idade: %{idade}`)
+console.log(`Idade: ${idade}`)
 
 
 

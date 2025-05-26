@@ -1,4 +1,4 @@
-// laço de repetição
+// laço de repetição for 1 ate 5
 
 // let = 1 = 1 (começa valor com 1)
 // i <= 5 (ira repetir até 5)
