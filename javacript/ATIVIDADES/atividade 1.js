@@ -10,6 +10,6 @@ for (let i = 1; i <=10; i++) {
     console.log(`${numero} x ${i} = ${resultado}`)
 }
 
-
-
+// Exemplo de uso: Se o usuário digitar 5, a saída será:
+    
 

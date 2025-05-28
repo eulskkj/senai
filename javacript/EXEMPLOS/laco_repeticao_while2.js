@@ -1,6 +1,6 @@
 // laço de repetica: do while
 
-let j = 1;
+let j = 10;
 do{
     console.log(j)
     j++
