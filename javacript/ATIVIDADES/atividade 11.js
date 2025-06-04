@@ -7,7 +7,6 @@ function media(a,b) {
 nota1= parseFloat(readlineSync.question("Digite a primeira nota: "))
 nota2= parseFloat(readlineSync.question("Digite a segunda nota: "))
 
-media = (nota1, nota2)
-console.log(`A média é = ${media}`)
-
+const resultado = media(nota1, nota2)
+console.log(`A média é = ${resultado}`)
 
