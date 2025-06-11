@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contagem Regressiva</title>
+</head>
+<body>
+  <h2>Digite um número para iniciar a contagem regressiva (em segundos):</h2>
+  <input type="number" id="tempoInput" placeholder="Ex: 10" min="1" />
+  <button onclick="iniciarContagem()">Iniciar</button>
+
+  <h1 id="timer"></h1>
+
+  <script>
+    let intervalo; // Para controlar o setInterval
+
+    function iniciarContagem() {
+      // Limpa intervalo anterior, se houver
+      clearInterval(intervalo);
+
+      let tempo = parseInt(document.getElementById('tempoInput').value);
+      const timerElemento = document.getElementById('timer');
+
+      if (isNaN(tempo) || tempo <= 0) {
+        timerElemento.textContent = "Por favor, digite um número válido!";
+        return;
+      }
+
+      timerElemento.textContent = tempo;
+
+      intervalo = setInterval(() => {
+        tempo--;
+        timerElemento.textContent = tempo;
+
+        if (tempo <= 0) {
+          clearInterval(intervalo);
+          timerElemento.textContent = "Tempo esgotado!";
+        }
+      }, 1000); // Executa a cada 1 segundo
+    }
+  </script>
+</body>
+</html>
